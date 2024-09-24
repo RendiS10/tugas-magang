@@ -1,117 +1,135 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   font-family: "Ubuntu", sans-serif;
 }
-.kosong{
-  background-color:#2D4059;
+
+.kosong {
+  background-color: #2D4059;
   height: 30px;
 }
-header{
+
+header {
   display: flex;
   flex-direction: row;
   padding-left: 80px;
   background-color: #FEC106;
   height: 150px;
 }
-header  img{
+
+header img {
   width: 100px;
   height: 100px;
-  margin: auto;
 }
-header  nav  ul{
+
+header nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 50px;
 }
-header  nav  ul  li{
+
+header nav ul li {
   list-style: none;
   border: solid 1px black;
   padding: 10px;
   margin-right: 10px;
   margin-top: 10px;
+  border-radius: 5px;
 }
-header  nav  ul  li  a{
+
+header nav ul li a {
   text-decoration: none;
   color: black;
 }
 
-main{
+main {
   display: flex;
   flex-direction: column;
 }
-.welcome{
+
+.welcome {
   display: flex;
   justify-content: center;
-  gap: 2rem ;
+  gap: 2rem;
   background-color: #FEC106;
   height: 80vh;
   flex-direction: column;
+  padding-bottom: 20px;
 }
-.welcome .kiri{
+
+.welcome .kiri {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Menyelaraskan secara vertikal */
-  align-items: center; /* Menyelaraskan secara horizontal */
+  justify-content: center;
+  align-items: center;
 }
-.welcome .kiri pre{
-  margin: 0; /* Menghapus margin default */
+
+.welcome .kiri pre {
+  margin: 0;
 }
-.welcome .kiri p{
-  margin: 0; /* Menghapus margin default */
-  text-align: center; /* Menyelaraskan teks di tengah */
+
+.welcome .kiri p {
+  margin: 0;
+  text-align: center;
 }
-.welcome h1{
+
+.welcome h1 {
   color: white;
   font-size: 32pt;
 }
-.welcome p{
+
+.welcome p {
   color: white;
   font-size: 16pt;
   text-align: center;
 }
-.welcome .kanan{
+
+.welcome .kanan {
   width: 50%;
 }
-.welcome .kanan img{
+
+.welcome .kanan img {
   width: 300px;
   height: 300px;
-  border-radius: 5px;
+  border-radius: 10px;
   padding-left: 10px;
 }
-.container{
+
+.container {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 }
 
-.profil{
+.profil {
   background-color: #2D4059;
-  height: 100vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 30vh;
 }
 
-.profil h1{
+.profil h1 {
   text-align: center;
   color: white;
   font-size: 32pt;
   padding-top: 20px;
 }
-.profil p{
+
+.profil p {
   color: white;
   padding: 10px;
   text-align: center;
 }
-.program{
+
+.program {
   background-color: #F4EB82;
   height: 100vh;
   display: flex;
@@ -120,18 +138,21 @@ main{
   justify-content: center;
   gap: 3rem;
 }
-.program h1{
+
+.program h1 {
   text-align: center;
   color: #2D4059;
   font-size: 32pt;
   padding-top: 20px;
 }
-.program ul{
+
+.program ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.program li{
+
+.program li {
   list-style: none;
   border: 1px solid #2D4059;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -144,15 +165,195 @@ main{
   color: #2D4059;
   font-weight: bold;
 }
-.informasi{
+
+.informasi {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
-.informasi h1{
+
+.informasi h1 {
   text-align: center;
   color: #2D4059;
   font-size: 32pt;
   padding-top: 20px;
+}
+
+.informasi p {
+  font-weight: bold;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: 'Ubuntu', sans-serif;
+  min-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.topik {
+  background-color: #F4EB82;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.topik h1 {
+  color: #2D4059;
+  font-size: 32pt;
+  margin-bottom: 20px;
+}
+
+.topik h3 {
+  color: #2D4059;
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.topik .berita {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.topik .berita ul{
+  list-style: none;
+  padding: 0;
+}
+
+.topik .berita li{
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.topik .berita a{
+  text-decoration: none;
+}
+.topik .berita li:hover{
+  transform: scale(1.05);
+}
+
+.topik figure {
+  margin: 0;
+  padding: 0;
+}
+
+.topik img {
+  width: 300px;
+  height: 200px;
+}
+
+.topik figcaption {
+  padding: 10px;
+  font-size: 14pt;
+  color: #2D4059;
+}
+
+.media {
+  background-color: #ABE7C0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.media h1 {
+  color: #2D4059;
+  font-size: 32pt;
+  margin-bottom: 20px;
+}
+
+.media h3 {
+  color: #2D4059;
+  font-size: 24pt;
+  margin-bottom: 20px;
+}
+
+.media .video {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+footer.kontak {
+  background-color: #A5CDF3;
+  padding: 50px 0;
+  text-align: center;
+}
+
+footer.kontak h1 {
+  color: #2D4059;
+  font-size: 32pt;
+  margin-bottom: 20px;
+}
+
+footer.kontak ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer.kontak li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s;
+}
+
+footer.kontak li:hover {
+  transform: scale(1.05);
+}
+
+footer.kontak a {
+  text-decoration: none;
+  color: #2D4059;
+  font-size: 18pt;
+  font-weight: bold;
+}
+
+footer p {
+  color: #2D4059;
+  font-size: 14pt;
+  margin-top: 20px;
 }
