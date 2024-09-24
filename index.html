@@ -5,55 +5,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nuruddin Institute</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
+  <div class="kosong"></div>
   <header>
+    <img src="img/FotoProfilNuruddinInstitue.jpg" alt="tes">
     <nav>
       <ul>
-        <li>
-          <a href="#"><b>Profil Nuruddin Institute</b></a>
+        <li style="background-color: #D0D0D0;">
+          <a href="#"><b>Tentang Kami</b></a>
         </li>
-        <li>
+        <li style="background-color: #F4EB82;">
           <a href="#"><b>Program Pelatihan</b></a>
         </li>
-        <li>
+        <li style="background-color: #C499E1;">
           <a href="#"><b>Informasi Pelatihan</b></a>
         </li>
-        <li>
+        <li style="background-color: #F69D96;">
           <a href="#"><b>Berita dan Artikel</b></a>
         </li>
-        <li>
-          <a href="#"><b>Galeri dan Video</b></a>
+        <li style="background-color: #ABE7C0;">
+          <a href="#" ><b>Galeri dan Video</b></a>
         </li>
-        <li>
+        <li style="background-color: #A5CDF3;">
           <a href="#Kontak"><b>Kontak Nuruddin Institute</b></a>
+        </li>
+        <li style="background-color: #F87113;">
+          <a href="#LOGIN"><b>LOGIN</b></a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Music On ?</h1>
-    <audio controls>
-      <source src="audio/Ngoni.mp3" type="audio/mpeg" />
-      Browsermu tidak mendukung tag audio, upgrade donk!
-    </audio>
     <article>
-      <section>
-        <h1>Profil Nuruddin Institute</h1>
-        <div>
-          <figure>
-            <img src="img/FotoProfilNuruddinInstitue.jpg" alt="ini image" width="150px" height="150px" />
-            <figcaption>
+      <section class="welcome">
+        <div class="container">
+          <div class="kiri">
+            <h1>
+            <pre>
+          Selamat Datang
+          Di Website 
+          Nuruddin Institute
+            </pre>
+          </h1>
+        </div>
+        <div class="kanan">
+          <img src="img/welcome.jpg" alt="Kelas Yang Terdiri dari Kelas Sharaf, Nahwu dan Kelas Baca Kitab">
+        </div>
+      </div>
+      <p>Website Yang Bertujuan Untuk Menyediakan Informasi 
+        Tentang Pembelajaran Bahasa Arab Kami
+      </p>
+      </section>
+      <section class="profil">
+        <h1>Tentang Kami</h1>
+            <p>
               Nuruddin Institute adalah organasi pendidikan yang berfokus pada pembelajaran bahasa dari dasar hingga
               bisa membaca kitab gundul, selain itu nurudiin institute juga memberikan pengetahuan terkait isi dari
               kitab
               kitab yang dipelajari dan akan didiskusikan setiap bulannya.
-            </figcaption>
-          </figure>
-        </div>
+            </p>
       </section>
-      <section>
+      <section class="program">
         <h1>Program Pelatihan</h1>
         <ul>
           <li>Kelas Sharaf 1</li>
@@ -187,7 +207,8 @@
         <div class="berita">
           <ul>
             <li>
-              <a href="https://uinjkt.ac.id/index.php/id/dr-muhbib-abdul-wahhab-bahasa-arab-amiyah-perlu-diajarkan" target="_blank">
+              <a href="https://uinjkt.ac.id/index.php/id/dr-muhbib-abdul-wahhab-bahasa-arab-amiyah-perlu-diajarkan"
+                target="_blank">
                 <figure>
                   <img src="img/berita1.png" alt="Pentingnya Belajar Bahasa ARAB" width="150px" height="100px">
                   <figcaption><i>Pentingnya Belajar Bahasa ARAB</i></figcaption>
@@ -200,7 +221,8 @@
         <div class="artikel">
           <ul>
             <li>
-              <a href="https://www.instagram.com/p/CxEjCTvy9X8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+              <a href="https://www.instagram.com/p/CxEjCTvy9X8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                target="_blank">
                 <figure>
                   <img src="img/artikel1.png" alt="Keseharianmu" width="150px" height="100px">
                   <figcaption><i>Keseharianmulah yang Menentukan</i></figcaption>
@@ -237,26 +259,27 @@
       </section>
       <section>
         <fieldset>
-          <legend>Anda Berminat Untuk Bergabung Bersama Kami ? Daftarkan diri anda Segera melalui Form Dibawah ini</legend>
+          <legend>Anda Berminat Untuk Bergabung Bersama Kami ? Daftarkan diri anda Segera melalui Form Dibawah ini
+          </legend>
           <form action="">
             <ul>
               <li>
                 <label for="nama">Masukan Nama Lengkap Anda :</label>
                 <input type="text" name="nama" id="nama" />
-            </li>
-            <br>
-            <li>
-              <label for="email">Masukan Email Anda :</label>
-              <input type="email" name="email" id="email" />
-            </li>
-            <br>
-            <li>
-              <label for="nomor">Masukan Nomor Anda :</label>
-              <input type="number" name="nomor" id="nomor">
-            </li>
-            <br>
+              </li>
+              <br>
+              <li>
+                <label for="email">Masukan Email Anda :</label>
+                <input type="email" name="email" id="email" />
+              </li>
+              <br>
+              <li>
+                <label for="nomor">Masukan Nomor Anda :</label>
+                <input type="number" name="nomor" id="nomor">
+              </li>
+              <br>
               <input type="submit" value="Submit" />
-          </ul>
+            </ul>
         </fieldset>
         </form>
       </section>
@@ -277,4 +300,5 @@
     <p>&copy; 2023 Rendi Sutendi STMIK Mardira Indonesia </p>
   </footer>
 </body>
+
 </html>

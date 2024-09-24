@@ -1,0 +1,137 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Ubuntu", sans-serif;
+}
+.kosong{
+  background-color:#2D4059;
+  height: 30px;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  padding-left: 80px;
+  background-color: #FEC106;
+  height: 150px;
+}
+header  img{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+header  nav  ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+header  nav  ul  li{
+  list-style: none;
+  border: solid 1px black;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+header  nav  ul  li  a{
+  text-decoration: none;
+  color: black;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+.welcome{
+  display: flex;
+  justify-content: center;
+  gap: 2rem ;
+  background-color: #FEC106;
+  height: 80vh;
+  flex-direction: column;
+}
+.welcome .kiri{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Menyelaraskan secara vertikal */
+  align-items: center; /* Menyelaraskan secara horizontal */
+}
+.welcome .kiri pre{
+  margin: 0; /* Menghapus margin default */
+}
+.welcome .kiri p{
+  margin: 0; /* Menghapus margin default */
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+.welcome h1{
+  color: white;
+  font-size: 32pt;
+}
+.welcome p{
+  color: white;
+  font-size: 16pt;
+  text-align: center;
+}
+.welcome .kanan{
+  width: 50%;
+}
+.welcome .kanan img{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.profil{
+  background-color: #2D4059;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+}
+
+.profil h1{
+  text-align: center;
+  color: white;
+  font-size: 32pt;
+  padding-top: 20px;
+}
+.profil p{
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.program{
+  background-color: #F4EB82;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.program h1{
+  text-align: center;
+  color: white;
+  font-size: 32pt;
+  padding-top: 20px;
+}
+.program li{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  border: solid 1px black;
+}
