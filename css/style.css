@@ -344,12 +344,12 @@ footer.kontak li {
 footer.kontak li:hover {
   transform: scale(1.05);
 }
-
 footer.kontak a {
   text-decoration: none;
   color: #2D4059;
   font-size: 18pt;
   font-weight: bold;
+  padding-left: 3px;
 }
 
 footer p {

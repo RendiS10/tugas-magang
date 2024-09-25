@@ -8,9 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link
     href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -20,25 +22,25 @@
     <nav>
       <ul>
         <li style="background-color: #D0D0D0;">
-          <a href="#"><b>Tentang Kami</b></a>
+          <a href="#aboutus"><b>Tentang Kami</b></a>
         </li>
         <li style="background-color: #F4EB82;">
-          <a href="#"><b>Program Pelatihan</b></a>
+          <a href="#exerciseprogram"><b>Program Pelatihan</b></a>
         </li>
         <li style="background-color: #C499E1;">
-          <a href="#"><b>Informasi Pelatihan</b></a>
+          <a href="#exerciseinfo"><b>Informasi Pelatihan</b></a>
         </li>
         <li style="background-color: #F69D96;">
-          <a href="#"><b>Berita dan Artikel</b></a>
+          <a href="#artikel"><b>Berita dan Artikel</b></a>
         </li>
         <li style="background-color: #ABE7C0;">
-          <a href="#"><b>Galeri dan Video</b></a>
+          <a href="#media"><b>Galeri dan Video</b></a>
         </li>
         <li style="background-color: #A5CDF3;">
-          <a href="#Kontak"><b>Kontak Nuruddin Institute</b></a>
+          <a href="#kontak"><b>Kontak Nuruddin Institute</b></a>
         </li>
         <li style="background-color: #F87113;">
-          <a href="#LOGIN"><b>LOGIN</b></a>
+          <a href="menu/login.html"><b>LOGIN</b></a>
         </li>
       </ul>
     </nav>
@@ -57,14 +59,14 @@
             </h1>
           </div>
           <div class="kanan">
-            <img src="img/welcome.jpg" alt="Kelas Yang Terdiri dari Kelas Sharaf, Nahwu dan Kelas Baca Kitab">
+            <img src="img/welcome.jpg" alt="Kelas Yang Terdiri dari Kelas Sharaf, Nahwu dan Kelas Baca Kitab" style="max-width: 100%; height: auto;">
           </div>
         </div>
         <p>Website Yang Bertujuan Untuk Menyediakan Informasi 
           Tentang Pembelajaran Bahasa Arab Kami
         </p>
       </section>
-      <section class="profil">
+      <section class="profil" id="aboutus">
         <h1>Tentang Kami</h1>
         <p>
           Nuruddin Institute adalah organasi pendidikan yang berfokus pada pembelajaran bahasa dari dasar hingga
@@ -73,7 +75,7 @@
           kitab yang dipelajari dan akan didiskusikan setiap bulannya.
         </p>
       </section>
-      <section class="program">
+      <section class="program" id="exerciseprogram">
         <h1>Program Pelatihan</h1>
         <ul>
           <li>Kelas Sharaf 1</li>
@@ -83,7 +85,7 @@
           <li>Kelas Nahwu 2</li>
         </ul>
       </section>
-      <section class="informasi">
+      <section class="informasi" id="exerciseinfo">
         <h1>Informasi Pelatihan</h1>
         <p>
           Kelas Nuriddin Institute Diadakan Pada hari dan waktu yang telah disediakan dan sepakati diantaranya ;
@@ -205,7 +207,7 @@
           </tbody>
         </table>
       </section>
-      <section class="topik">
+      <section class="topik" id="artikel">
         <h1>Berita dan Artikel</h1>
         <div class="berita">
           <ul>
@@ -221,28 +223,29 @@
           </ul>
         </div>
       </section>
-      <section class="media">
+      <section class="media" id="media">
         <h1>Galeri dan Video</h1>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=VgD8lwkrB4XVbKrx"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/tz-Eitr5pQg?si=VgD8lwkrB4XVbKrx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <br>
       </section>
     </article>
   </main>
-      <footer class="kontak">
+      <footer class="kontak" id="kontak">
         <h1 id="Kontak">Kontak Kami</h1>
         <ul>
           <li>
+            <i class="fa-brands fa-instagram"style="font-size: 32pt"></i>
             <a href="https://www.instagram.com/nuruddin_institute/" target="_blank">Instagram</a>
           </li>
           <li>
+            <i class="fab fa-whatsapp" style="font-size: 32pt"></i>
             <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
           </li>
         </ul>
+        <br>
+        <p>Copyright &copy; 2024 Rendi Sutendi 2024</p>
       </footer>
 </body>
 </html>
