@@ -9,15 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="css/responsive.css">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
   <div class="kosong"></div>
-  <header>
+  <header id="header">
     <img src="img/FotoProfilNuruddinInstitue.jpg" alt="tes">
     <nav>
       <ul>
@@ -45,7 +43,19 @@
       </ul>
     </nav>
   </header>
+
   <main>
+    <aside>
+      <div class="top" onclick="goToTop()">
+        <i class="far fa-hand-pointer" style="color: white"></i>
+      </div>
+      <script>
+        const goToTop = () => {
+          location.href = "#header";
+        };
+      </script>
+    </aside>
+
     <article>
       <section class="welcome">
         <div class="container">
@@ -66,15 +76,16 @@
           Tentang Pembelajaran Bahasa Arab Kami
         </p>
       </section>
+
       <section class="profil" id="aboutus">
         <h1>Tentang Kami</h1>
         <p>
-          Nuruddin Institute adalah organasi pendidikan yang berfokus pada pembelajaran bahasa dari dasar hingga
-          bisa membaca kitab gundul, selain itu nurudiin institute juga memberikan pengetahuan terkait isi dari
-          kitab
-          kitab yang dipelajari dan akan didiskusikan setiap bulannya.
+          Nuruddin Institute adalah organisasi pendidikan yang berfokus pada pembelajaran bahasa dari dasar hingga
+          bisa membaca kitab gundul, selain itu Nuruddin Institute juga memberikan pengetahuan terkait isi dari
+          kitab-kitab yang dipelajari dan didiskusikan setiap bulannya.
         </p>
       </section>
+
       <section class="program" id="exerciseprogram">
         <h1>Program Pelatihan</h1>
         <ul>
@@ -85,10 +96,11 @@
           <li>Kelas Nahwu 2</li>
         </ul>
       </section>
+
       <section class="informasi" id="exerciseinfo">
         <h1>Informasi Pelatihan</h1>
         <p>
-          Kelas Nuriddin Institute Diadakan Pada hari dan waktu yang telah disediakan dan sepakati diantaranya ;
+          Kelas Nuruddin Institute diadakan pada hari dan waktu yang telah disepakati diantaranya:
         </p>
         <table class="styled-table">
           <thead>
@@ -207,13 +219,13 @@
           </tbody>
         </table>
       </section>
+
       <section class="topik" id="artikel">
         <h1>Berita dan Artikel</h1>
         <div class="berita">
           <ul>
             <li>
-              <a href="https://uinjkt.ac.id/index.php/id/dr-muhbib-abdul-wahhab-bahasa-arab-amiyah-perlu-diajarkan"
-                target="_blank">
+              <a href="https://uinjkt.ac.id/index.php/id/dr-muhbib-abdul-wahhab-bahasa-arab-amiyah-perlu-diajarkan" target="_blank">
                 <figure>
                   <img src="img/berita1.png" alt="Pentingnya Belajar Bahasa ARAB" width="150px" height="100px">
                   <figcaption><i>Pentingnya Belajar Bahasa ARAB</i></figcaption>
@@ -223,6 +235,7 @@
           </ul>
         </div>
       </section>
+
       <section class="media" id="media">
         <h1>Galeri dan Video</h1>
         <div class="video-container">
@@ -232,20 +245,47 @@
       </section>
     </article>
   </main>
-      <footer class="kontak" id="kontak">
-        <h1 id="Kontak">Kontak Kami</h1>
-        <ul>
-          <li>
-            <i class="fa-brands fa-instagram"style="font-size: 32pt"></i>
-            <a href="https://www.instagram.com/nuruddin_institute/" target="_blank">Instagram</a>
-          </li>
-          <li>
-            <i class="fab fa-whatsapp" style="font-size: 32pt"></i>
-            <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
-          </li>
-        </ul>
-        <br>
-        <p>Copyright &copy; 2024 Rendi Sutendi 2024</p>
-      </footer>
+
+  <footer class="kontak" id="kontak">
+    <h1 id="Kontak">Kontak Kami</h1>
+    <ul>
+      <li>
+        <i class="fa-brands fa-instagram" style="font-size: 32pt"></i>
+        <a href="https://www.instagram.com/nuruddin_institute/" target="_blank">Instagram</a>
+      </li>
+      <li>
+        <i class="fab fa-whatsapp" style="font-size: 32pt"></i>
+        <a href="https://wa.me/6281234567890" target="_blank">WhatsApp</a>
+      </li>
+    </ul>
+    <br>
+    <p>Copyright &copy; 2024 Rendi Sutendi 2024</p>
+  </footer>
+
+  <a href="#header" class="top" aria-label="Kembali ke atas halaman"></a>
+
+  <script>
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.profil, .program, .informasi, .topik, .media');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    };
+
+    document.addEventListener('DOMContentLoaded', animateOnScroll);
+  </script>
 </body>
+
 </html>
