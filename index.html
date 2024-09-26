@@ -87,7 +87,7 @@
       <section class="profil" id="aboutus">
         <h1>Tentang Kami</h1>
         <p>
-          Nuruddin Institute adalah organisasi pendidikan yang berfokus pada pembelajaran bahasa dari dasar hingga
+          Nuruddin Institute adalah organisasi pendidikan yang berfokus pada pembelajaran bahasa Arab Kitab dari dasar hingga
           bisa membaca kitab gundul, selain itu Nuruddin Institute juga memberikan pengetahuan terkait isi dari
           kitab-kitab yang dipelajari dan didiskusikan setiap bulannya.
         </p>
@@ -246,7 +246,7 @@
       <section class="media" id="media">
         <h1>Galeri dan Video</h1>
         <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/tz-Eitr5pQg?si=VgD8lwkrB4XVbKrx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=gTSd9Lp8QENzmZcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
         <br>
       </section>
@@ -307,15 +307,12 @@
       }
       isPlaying = !isPlaying;
     });
-
-    // Fungsi untuk smooth scroll
     function smoothScroll(target, duration) {
       var target = document.querySelector(target);
       var targetPosition = target.getBoundingClientRect().top;
       var startPosition = window.pageYOffset;
       var distance = targetPosition - startPosition;
       var startTime = null;
-
       function animation(currentTime) {
         if (startTime === null) startTime = currentTime;
         var timeElapsed = currentTime - startTime;
@@ -334,14 +331,12 @@
       requestAnimationFrame(animation);
     }
 
-    // Event listener untuk tombol top
     var topButton = document.getElementById('topButton');
     topButton.addEventListener('click', function(e) {
       e.preventDefault();
-      smoothScroll('body', 1000); // 1000ms = 1 detik durasi scroll
+      smoothScroll('body', 1000);
     });
 
-    // Tampilkan/sembunyikan tombol top berdasarkan posisi scroll
     window.addEventListener('scroll', function() {
       if (window.pageYOffset > 300) {
         topButton.style.display = 'flex';
@@ -349,6 +344,29 @@
         topButton.style.display = 'none';
       }
     });
+  </script>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.body.classList.add('scrolling');
+        
+        setTimeout(() => {
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }, 10);
+
+        setTimeout(() => {
+          document.body.classList.remove('scrolling');
+        }, 1000);
+      });
+    });
+
+    // Existing script for top button
+    // ...
   </script>
 </body>
 
