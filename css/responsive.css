@@ -71,6 +71,14 @@
     bottom: 15px;
     right: 15px;
   }
+
+  .music-player {
+    bottom: 60px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 0.9em;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -111,5 +119,13 @@
   input[type="password"],
   input[type="submit"] {
     font-size: 14px;
+  }
+
+  .music-player {
+    bottom: 50px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8em;
   }
 }
