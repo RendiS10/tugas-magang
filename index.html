@@ -56,11 +56,6 @@
           Your browser does not support the audio element.
         </audio>
       </div>
-      <script>
-        const goToTop = () => {
-          location.href = "#header";
-        };
-      </script>
     </aside>
 
     <article>
@@ -228,27 +223,63 @@
       </section>
 
       <section class="topik" id="artikel">
-        <h1>Berita dan Artikel</h1>
-        <div class="berita">
-          <ul>
-            <li>
-              <a href="https://uinjkt.ac.id/index.php/id/dr-muhbib-abdul-wahhab-bahasa-arab-amiyah-perlu-diajarkan" target="_blank">
-                <figure>
-                  <img src="img/berita1.png" alt="Pentingnya Belajar Bahasa ARAB" width="150px" height="100px">
-                  <figcaption><i>Pentingnya Belajar Bahasa ARAB</i></figcaption>
-                </figure>
-              </a>
-            </li>
-          </ul>
+        <h1>Galeri Foto dan Video</h1>
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="img/artikel1.png" alt="Slide 1">
+            <div class="text">Kegiatan Belajar 1</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/artikel1.png" alt="Slide 2">
+            <div class="text">Kegiatan Belajar 2</div>
+          </div>
+
+          <div class="mySlides fade">
+            <img src="img/artikel1.png" alt="Slide 3">
+            <div class="text">Kegiatan Belajar 3</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
       </section>
 
       <section class="media" id="media">
         <h1>Galeri dan Video</h1>
-        <div class="video-container">
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=gTSd9Lp8QENzmZcL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="slideshow-container media-slideshow">
+          <div class="mySlides fade">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=zo6Qcppv47NEpTL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">Kegiatan 1</div>
+          </div>
+
+          <div class="mySlides fade">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=zo6Qcppv47NEpTL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">Kegiatan 2</div>
+          </div>
+
+          <div class="mySlides fade">
+            <iframe width="300" height="200" src="https://www.youtube.com/embed/tz-Eitr5pQg?si=zo6Qcppv47NEpTL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="text">Video Kegiatan</div>
+          </div>
+
+          <a class="prev" onclick="plusSlidesMedia(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlidesMedia(1)">&#10095;</a>
         </div>
         <br>
+
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlideMedia(1)"></span>
+          <span class="dot" onclick="currentSlideMedia(2)"></span>
+          <span class="dot" onclick="currentSlideMedia(3)"></span>
+        </div>
       </section>
     </article>
   </main>
@@ -269,105 +300,7 @@
     <p>Copyright &copy; 2024 Rendi Sutendi 2024</p>
   </footer>
 
-  <script>
-    const animateOnScroll = () => {
-      const elements = document.querySelectorAll('.profil, .program, .informasi, .topik, .media');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      elements.forEach(element => {
-        observer.observe(element);
-      });
-    };
-
-    document.addEventListener('DOMContentLoaded', animateOnScroll);
-  </script>
-
-  <script>
-    const musicToggle = document.getElementById('musicToggle');
-    const backgroundMusic = document.getElementById('backgroundMusic');
-    let isPlaying = false;
-
-    musicToggle.addEventListener('click', () => {
-      if (isPlaying) {
-        backgroundMusic.pause();
-        musicToggle.classList.remove('playing');
-      } else {
-        backgroundMusic.play();
-        musicToggle.classList.add('playing');
-      }
-      isPlaying = !isPlaying;
-    });
-    function smoothScroll(target, duration) {
-      var target = document.querySelector(target);
-      var targetPosition = target.getBoundingClientRect().top;
-      var startPosition = window.pageYOffset;
-      var distance = targetPosition - startPosition;
-      var startTime = null;
-      function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        var timeElapsed = currentTime - startTime;
-        var run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-      }
-
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-
-      requestAnimationFrame(animation);
-    }
-
-    var topButton = document.getElementById('topButton');
-    topButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      smoothScroll('body', 1000);
-    });
-
-    window.addEventListener('scroll', function() {
-      if (window.pageYOffset > 300) {
-        topButton.style.display = 'flex';
-      } else {
-        topButton.style.display = 'none';
-      }
-    });
-  </script>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        document.body.classList.add('scrolling');
-        
-        setTimeout(() => {
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        }, 10);
-
-        setTimeout(() => {
-          document.body.classList.remove('scrolling');
-        }, 1000);
-      });
-    });
-
-    // Existing script for top button
-    // ...
-  </script>
+  <script src="controller/home.js"></script>
 </body>
 
 </html>
