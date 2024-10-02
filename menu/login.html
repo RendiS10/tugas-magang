@@ -17,15 +17,15 @@
       <img src="../img/FotoProfilNuruddinInstitue.jpg" alt="Logo Nuruddin Institute">
       <fieldset>
         <legend>Action</legend>
-        <form action="/login" method="POST">
+        <form id="loginForm" action="/login" method="POST" onsubmit="return validateForm()">
           <ul>
             <li>
               <label for="username">Username/Email</label>
-              <input type="email" name="username" id="username" placeholder="Masukan Username/Email Anda!" required>
+              <input type="email" name="username" id="username" placeholder="Masukan Username/Email Anda!">
             </li>
             <li>
               <label for="password">Password</label>
-              <input type="password" name="password" id="password" placeholder="Masukan Password Anda!" required>
+              <input type="password" name="password" id="password" placeholder="Masukan Password Anda!">
             </li>
             <li>
               <input type="submit" value="Login">
@@ -41,6 +41,6 @@
       </fieldset>
     </div>
   </section>
+    <script src="../controller/login-validation.js" defer></script>
 </body>
-
 </html>
