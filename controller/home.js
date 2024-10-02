@@ -155,3 +155,50 @@ function showSlidesMedia(n, className) {
   slides[slideIndexMedia-1].style.display = "block";
   dots[slideIndexMedia-1].className += " active";
 }
+
+// Data jadwal (bisa dipindahkan ke file JSON terpisah jika diperlukan)
+const jadwalKelas = [
+  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "13.00 - 15.00" },
+  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Diskusi", hari: "Minggu", jam: "19.30 - 21.30" }
+];
+
+// Fungsi untuk menampilkan jadwal
+function tampilkanJadwal(filter = 'semua') {
+  const jadwalBody = document.getElementById('jadwalBody');
+  jadwalBody.innerHTML = ''; // Bersihkan isi tabel sebelum menambahkan yang baru
+
+  jadwalKelas.forEach(jadwal => {
+    if (filter === 'semua' || jadwal.kelas.includes(filter)) {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td>${jadwal.kelas}</td>
+        <td>${jadwal.hari}</td>
+        <td>${jadwal.jam}</td>
+      `;
+      jadwalBody.appendChild(row);
+    }
+  });
+}
+
+// Event listener untuk perubahan pada select
+document.getElementById('kelasFilter').addEventListener('change', function() {
+  tampilkanJadwal(this.value);
+});
+
+// Tampilkan semua jadwal saat halaman dimuat
+document.addEventListener('DOMContentLoaded', () => {
+  tampilkanJadwal();
+});

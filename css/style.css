@@ -326,6 +326,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding: 20px;
 }
 
 .informasi h1 {
@@ -337,6 +338,40 @@ main {
 
 .informasi p {
   font-weight: bold;
+}
+
+.informasi select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s ease-out 0.4s both; /* Animasi saat muncul */
+}
+
+.informasi select:hover {
+  border-color: #009879; /* Warna border saat hover */
+  box-shadow: 0 0 5px rgba(0, 151, 121, 0.5); /* Bayangan saat hover */
+}
+
+.informasi select:focus {
+  outline: none; /* Menghilangkan outline default */
+  border-color: #009879; /* Warna border saat fokus */
+  box-shadow: 0 0 5px rgba(0, 151, 121, 0.5); /* Bayangan saat fokus */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .styled-table {

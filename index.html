@@ -101,9 +101,16 @@
 
       <section class="informasi" id="exerciseinfo">
         <h1>Informasi Pelatihan</h1>
-        <p>
-          Kelas Nuruddin Institute diadakan pada hari dan waktu yang telah disepakati diantaranya:
-        </p>
+        <p>Kelas Nuruddin Institute diadakan pada hari dan waktu yang telah disepakati:</p>
+        <br>
+        <br>
+        <h3>PILIH INFORMASI KELAS</h3>
+        <select id="kelasFilter" name="kelasFilter">
+          <option value="semua">Semua Kelas</option>
+          <option value="Sharaf">Kelas Sharaf</option>
+          <option value="Nahwu">Kelas Nahwu</option>
+        </select>
+        
         <table class="styled-table">
           <thead>
             <tr>
@@ -112,112 +119,8 @@
               <th>Jam</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Kelas Sharaf 1</td>
-              <td>Sabtu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 1</td>
-              <td>Sabtu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 1</td>
-              <td>Minggu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 1</td>
-              <td>Minggu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 2</td>
-              <td>Sabtu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 2</td>
-              <td>Sabtu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 2</td>
-              <td>Minggu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 2</td>
-              <td>Minggu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 3</td>
-              <td>Sabtu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 3</td>
-              <td>Sabtu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 3</td>
-              <td>Minggu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Sharaf 3</td>
-              <td>Minggu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 1</td>
-              <td>Sabtu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 1</td>
-              <td>Sabtu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 1</td>
-              <td>Minggu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 1</td>
-              <td>Minggu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 2</td>
-              <td>Sabtu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 2</td>
-              <td>Sabtu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 2</td>
-              <td>Minggu</td>
-              <td>13.00 - 15.00</td>
-            </tr>
-            <tr>
-              <td>Kelas Nahwu 2</td>
-              <td>Minggu</td>
-              <td>16.20 - 18.20</td>
-            </tr>
-            <tr>
-              <td>Kelas Diskusi</td>
-              <td>Minggu</td>
-              <td>19.30 - 21.30</td>
-            </tr>
+          <tbody id="jadwalBody">
+            <!-- Jadwal akan diisi oleh JavaScript -->
           </tbody>
         </table>
       </section>
