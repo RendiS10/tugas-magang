@@ -178,7 +178,7 @@ const jadwalKelas = [
 // Fungsi untuk menampilkan jadwal
 function tampilkanJadwal(filter = 'semua') {
   const jadwalBody = document.getElementById('jadwalBody');
-  jadwalBody.innerHTML = ''; // Bersihkan isi tabel sebelum menambahkan yang baru
+  jadwalBody.innerHTML = '';
 
   jadwalKelas.forEach(jadwal => {
     if (filter === 'semua' || jadwal.kelas.includes(filter)) {
