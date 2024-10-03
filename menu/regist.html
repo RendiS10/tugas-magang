@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nuruddin Institute</title>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="../css/regist.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../css/responsive.css">
 </head>
+
 <body>
-  <h1>Halaman Registrasi</h1>
+  <section>
+    <div class="login-container">
+      <img src="../img/FotoProfilNuruddinInstitue.jpg" alt="Logo Nuruddin Institute">
+      <fieldset>
+        <legend>Action</legend>
+        <form id="loginForm"  action="login.html" method="POST" onsubmit="return validateRegist()">
+          <ul>
+            <li>
+              <label for="username">Nama Lengkap</label>
+              <input type="text" name="nama" id="nama" placeholder="Masukan Nama Lengkap Anda!">
+            </li>
+            <li>
+              <label for="username">Alamat</label>
+              <input type="text" name="alamat" id="alamat" placeholder="Masukan Alamat Anda">
+            </li>
+            <li>
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </li>
+            <li>
+              <label for="username">Username/Email</label>
+              <input type="email" name="username" id="username" placeholder="Masukan Username/Email Anda!">
+            </li>
+            <li>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Masukan Password Anda!">
+            </li>
+            <li>
+              <input type="submit" value="Daftar">
+            </li>
+            <li class="aksi">
+              <a href="login.html">Kembali Ke Halaman Login</a>
+            </li>
+          </ul>
+        </form>
+      </fieldset>
+    </div>
+  </section>
+    <script src="../controller/regist.js" defer></script>
 </body>
 </html>
