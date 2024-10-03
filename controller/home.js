@@ -155,8 +155,7 @@ function showSlidesMedia(n, className) {
   slides[slideIndexMedia-1].style.display = "block";
   dots[slideIndexMedia-1].className += " active";
 }
-
-// Data jadwal (bisa dipindahkan ke file JSON terpisah jika diperlukan)
+// Fungsi Untuk menampilkan jadwal Kelas
 const jadwalKelas = [
   { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "13.00 - 15.00" },
   { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "16.20 - 18.20" },
@@ -172,6 +171,7 @@ const jadwalKelas = [
   { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "16.20 - 18.20" },
   { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "13.00 - 15.00" },
   { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "16.20 - 18.20" },
+  { kelas: "Kelas Baca Kitab", hari: "Minggu", jam: "16.20 - 18.20" },
   { kelas: "Kelas Diskusi", hari: "Minggu", jam: "19.30 - 21.30" }
 ];
 

@@ -18,10 +18,15 @@ function validateForm() {
   }
 
   // Cek Username dan Password
-  if (username === 'admin@gmail.com' && password === 'admin123') {
+  if (username == 'admin@gmail.com' && password == 'admin123') {
     window.location.href = 'admin.html';
     return false; // Mencegah form dari submit
-  } else {
+  } 
+  else if(username == `user@gmail.com` && password == `user123`) {
+    window.location.href = 'user.html';
+    return false;
+  }
+  else {
     alert('Username atau password salah.');
     return false;
   }

@@ -285,7 +285,7 @@ main {
 
 .program {
   background-color: #F4EB82;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -523,10 +523,6 @@ footer.kontak ul {
 }
 
 footer.kontak li {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px 0;
   transition: transform 0.3s;
