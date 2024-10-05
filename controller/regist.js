@@ -33,7 +33,6 @@ function validateRegist() {
       return false;
     }
   } else {
-    alert('Registrasi Berhasil Tapi Fitur Belum Tersedia');
-    window.location.href = '../menu/login.html';
+    window.location.href = 'login.html';
   }
 }
