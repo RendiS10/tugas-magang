@@ -51,7 +51,7 @@ function validateRegist() {
   } else {
 
     event.preventDefault();
-
+    alert('Registrasi Berhasil , Silahkan Login ');
     window.location.href = 'login.html';
 
   }
