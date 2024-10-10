@@ -1,9 +1,9 @@
-// Fungsi untuk scroll ke atas
+// Fungsi scroll ke atas
 const goToTop = () => {
   location.href = "#header";
 };
 
-// Animasi pada scroll
+// Animasi scroll
 const animateOnScroll = () => {
   const elements = document.querySelectorAll('.profil, .program, .informasi, .topik, .media');
 
@@ -25,7 +25,7 @@ const animateOnScroll = () => {
 
 document.addEventListener('DOMContentLoaded', animateOnScroll);
 
-// Kontrol musik latar
+// Kontrol musik
 const musicToggle = document.getElementById('musicToggle');
 const backgroundMusic = document.getElementById('backgroundMusic');
 let isPlaying = false;
@@ -81,7 +81,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Smooth scroll untuk link internal
+// Smooth scroll link internal
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -100,9 +100,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Fungsi untuk slideshow di bagian Galeri Foto dan Video
+// Fungsi slideshow di bagian Galeri Foto dan Video
 let slideIndex = 1;
 showSlides(slideIndex, 'topik');
+
+// mengatur slideshow otomatis
+function autoShowSlides() {
+  slideIndex++;
+  showSlides(slideIndex, 'topik');
+  setTimeout(autoShowSlides, 3000); // Ganti slide setiap 5 detik
+}
+
+autoShowSlides(); // Memanggil fungsi memulai slideshow otomatis
 
 function plusSlides(n) {
   showSlides(slideIndex += n, 'topik');
@@ -128,9 +137,18 @@ function showSlides(n, className) {
   dots[slideIndex-1].className += " active";
 }
 
-// Fungsi untuk slideshow di bagian Galeri dan Video
+// Fungsi slideshow Galeri dan Video
 let slideIndexMedia = 1;
 showSlidesMedia(slideIndexMedia, 'media');
+
+// fungsi mengatur slideshow otomatis
+function autoShowSlidesMedia() {
+  slideIndexMedia++;
+  showSlidesMedia(slideIndexMedia, 'media');
+  setTimeout(autoShowSlidesMedia, 3000); // Ganti slide setiap 5 detik
+}
+
+autoShowSlidesMedia(); // Memanggil fungsi memulai slideshow otomatis
 
 function plusSlidesMedia(n) {
   showSlidesMedia(slideIndexMedia += n, 'media');
@@ -155,27 +173,28 @@ function showSlidesMedia(n, className) {
   slides[slideIndexMedia-1].style.display = "block";
   dots[slideIndexMedia-1].className += " active";
 }
-// Fungsi Untuk menampilkan jadwal Kelas
+
+// Fungsi menampilkan jadwal Kelas
 const jadwalKelas = [
-  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "13.00 - 15.00" },
-  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Baca Kitab", hari: "Minggu", jam: "16.20 - 18.20" },
-  { kelas: "Kelas Diskusi", hari: "Minggu", jam: "19.30 - 21.30" }
+  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "13.00 - 15.00", infaq : "Rp.30.000" },
+  { kelas: "Kelas Sharaf 1", hari: "Sabtu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "13.00 - 15.00", infaq : "Rp.30.000" },
+  { kelas: "Kelas Sharaf 2", hari: "Minggu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "13.00 - 15.00", infaq : "Rp.30.000"},
+  { kelas: "Kelas Sharaf 3", hari: "Sabtu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "13.00 - 15.00", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 1", hari: "Sabtu", jam: "16.20 - 18.20", infaq : "Rp.30.000" },
+  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "13.00 - 15.00", infaq : "Rp.30.000" },
+  { kelas: "Kelas Nahwu 1", hari: "Minggu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "13.00 - 15.00", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 2", hari: "Sabtu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "13.00 - 15.00", infaq : "Rp.30.000"},
+  { kelas: "Kelas Nahwu 2", hari: "Minggu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Baca Kitab", hari: "Minggu", jam: "16.20 - 18.20", infaq : "Rp.30.000"},
+  { kelas: "Kelas Diskusi", hari: "Minggu", jam: "19.30 - 21.30", infaq : "Gratis"}
 ];
 
-// Fungsi untuk menampilkan jadwal
+// Fungsi menampilkan jadwal
 function tampilkanJadwal(filter = 'semua') {
   const jadwalBody = document.getElementById('jadwalBody');
   jadwalBody.innerHTML = '';
@@ -187,13 +206,14 @@ function tampilkanJadwal(filter = 'semua') {
         <td>${jadwal.kelas}</td>
         <td>${jadwal.hari}</td>
         <td>${jadwal.jam}</td>
+        <td style="color: red;">${jadwal.infaq}</td>
       `;
       jadwalBody.appendChild(row);
     }
   });
 }
 
-// Event listener untuk perubahan pada select
+// Event listener perubahan pada select
 document.getElementById('kelasFilter').addEventListener('change', function() {
   tampilkanJadwal(this.value);
 });
